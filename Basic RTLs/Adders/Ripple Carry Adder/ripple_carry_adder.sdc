@@ -9,3 +9,6 @@ set_output_delay 0.5 [all_outputs] -clock [get_clocks clk]
 
 # Define load of 10 for all output ports
 set_load 10 [all_outputs]
+
+# Set the clock skew constraint to 0.2ns
+set_clock_uncertainty 0.2 [get_clocks clk]
