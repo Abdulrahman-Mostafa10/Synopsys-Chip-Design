@@ -1,6 +1,7 @@
 module ripple_carry_adder(
     input signed [31:0] a,
     input signed [31:0] b,
+    input clk,
     input cin,
     output signed [31:0] sum,
     output cout,
@@ -13,8 +14,14 @@ module ripple_carry_adder(
     genvar i;
     generate
         for (i = 0; i < 32; i = i + 1) begin : bit_adder
-            assign {carry[i+1], sum[i]} = a[i] + b[i] + carry[i];
-        end
+                full_adder FA (
+                .a(a[i]),
+                .b(b[i]),
+                .cin(carry[i]),
+                .sum(sum[i]),
+                .cout(carry[i+1])
+            );        
+            end
     endgenerate
 
     assign cout = carry[32]; // Final carry out
