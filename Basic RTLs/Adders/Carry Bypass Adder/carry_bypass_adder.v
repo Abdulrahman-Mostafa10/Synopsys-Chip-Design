@@ -2,6 +2,7 @@ module carry_bypass_adder(
     input wire [31:0] a,
     input wire [31:0] b,
     input wire cin,
+    input wire clk,
     output wire [31:0] sum,
     output wire cout,
     output wire overflow
