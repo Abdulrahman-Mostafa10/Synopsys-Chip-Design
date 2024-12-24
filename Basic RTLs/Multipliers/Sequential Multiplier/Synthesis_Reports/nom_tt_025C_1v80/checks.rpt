@@ -1,0 +1,321 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+Startpoint: _2503_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: mult[54] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock source latency
+     1    0.097188    0.000000    0.000000    0.000000 ^ clk (in)
+                                                         clk (net)
+                      0.066407    0.033204    0.033204 ^ clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     2    0.081692    0.098897    0.177017    0.210221 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_clk (net)
+                      0.099903    0.007906    0.218127 ^ clkbuf_1_0_0_clk/A (sky130_fd_sc_hd__clkbuf_8)
+     2    0.072088    0.133661    0.212903    0.431031 ^ clkbuf_1_0_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         clknet_1_0_0_clk (net)
+                      0.133983    0.005381    0.436411 ^ clkbuf_2_0_0_clk/A (sky130_fd_sc_hd__clkbuf_8)
+     2    0.048297    0.095506    0.197544    0.633955 ^ clkbuf_2_0_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         clknet_2_0_0_clk (net)
+                      0.095728    0.003125    0.637080 ^ clkbuf_3_0__f_clk/A (sky130_fd_sc_hd__clkbuf_16)
+    21    0.157974    0.170050    0.240182    0.877263 ^ clkbuf_3_0__f_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_3_0__leaf_clk (net)
+                      0.171223    0.011318    0.888580 ^ clkbuf_leaf_47_clk/A (sky130_fd_sc_hd__clkbuf_8)
+     3    0.009694    0.037571    0.160258    1.048839 ^ clkbuf_leaf_47_clk/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         clknet_leaf_47_clk (net)
+                      0.037571    0.000148    1.048987 ^ _2503_/CLK (sky130_fd_sc_hd__dfxtp_4)
+     2    0.058916    0.172598    0.432360    1.481347 ^ _2503_/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                         net115 (net)
+                      0.174996    0.016156    1.497503 ^ output115/A (sky130_fd_sc_hd__clkbuf_16)
+     1   10.001538    9.931781    6.893130    8.390633 ^ output115/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         mult[54] (net)
+                      9.943529    0.284001    8.674634 ^ mult[54] (out)
+                                              8.674634   data arrival time
+
+                                 20.000000   20.000000   clock clk (rise edge)
+                                  0.000000   20.000000   clock network delay (propagated)
+                                 -0.200000   19.800001   clock uncertainty
+                                  0.000000   19.800001   clock reconvergence pessimism
+                                 -0.500000   19.300001   output external delay
+                                             19.300001   data required time
+---------------------------------------------------------------------------------------------
+                                             19.300001   data required time
+                                             -8.674634   data arrival time
+---------------------------------------------------------------------------------------------
+                                             10.625366   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+max slew
+
+Pin                                        Limit        Slew       Slack
+------------------------------------------------------------------------
+output69/X                              1.508186    9.963783   -8.455597 (VIOLATED)
+output86/X                              1.508186    9.958760   -8.450575 (VIOLATED)
+output78/X                              1.508186    9.953039   -8.444854 (VIOLATED)
+output90/X                              1.508186    9.944158   -8.435972 (VIOLATED)
+output81/X                              1.508186    9.943598   -8.435411 (VIOLATED)
+output117/X                             1.508186    9.943162   -8.434977 (VIOLATED)
+output82/X                              1.508186    9.942595   -8.434410 (VIOLATED)
+output68/X                              1.508186    9.942513   -8.434328 (VIOLATED)
+output100/X                             1.508186    9.942487   -8.434301 (VIOLATED)
+output72/X                              1.508186    9.942017   -8.433831 (VIOLATED)
+output75/X                              1.508186    9.941621   -8.433435 (VIOLATED)
+output101/X                             1.508186    9.941320   -8.433134 (VIOLATED)
+output118/X                             1.508186    9.937459   -8.429274 (VIOLATED)
+output125/X                             1.508186    9.936364   -8.428179 (VIOLATED)
+output122/X                             1.508186    9.936308   -8.428123 (VIOLATED)
+output115/X                             1.508186    9.931781   -8.423595 (VIOLATED)
+output102/X                             1.508186    9.925606   -8.417419 (VIOLATED)
+output74/X                              1.508186    9.925611   -8.417425 (VIOLATED)
+output76/X                              1.508186    9.924606   -8.416421 (VIOLATED)
+output73/X                              1.508186    9.924370   -8.416184 (VIOLATED)
+output84/X                              1.508186    9.924316   -8.416131 (VIOLATED)
+output80/X                              1.508186    9.924220   -8.416035 (VIOLATED)
+output91/X                              1.508186    9.924166   -8.415980 (VIOLATED)
+output79/X                              1.508186    9.922154   -8.413968 (VIOLATED)
+output70/X                              1.508186    9.921689   -8.413503 (VIOLATED)
+output87/X                              1.508186    9.915743   -8.407557 (VIOLATED)
+output71/X                              1.508186    9.903028   -8.394841 (VIOLATED)
+output106/X                             1.508186    9.902812   -8.394627 (VIOLATED)
+output103/X                             1.508186    9.898915   -8.390730 (VIOLATED)
+output104/X                             1.508186    9.898767   -8.390582 (VIOLATED)
+output120/X                             1.508186    9.886138   -8.377952 (VIOLATED)
+output105/X                             1.508186    9.885733   -8.377547 (VIOLATED)
+output119/X                             1.508186    9.884222   -8.376036 (VIOLATED)
+output109/X                             1.508186    9.883723   -8.375538 (VIOLATED)
+output116/X                             1.508186    9.883204   -8.375019 (VIOLATED)
+output124/X                             1.508186    9.881205   -8.373019 (VIOLATED)
+output89/X                              1.508186    9.879326   -8.371140 (VIOLATED)
+output107/X                             1.508186    9.879316   -8.371131 (VIOLATED)
+output123/X                             1.508186    9.879145   -8.370959 (VIOLATED)
+output83/X                              1.508186    9.869636   -8.361449 (VIOLATED)
+output67/X                              1.508186    9.867126   -8.358939 (VIOLATED)
+output88/X                              1.508186    9.866729   -8.358543 (VIOLATED)
+output85/X                              1.508186    9.864923   -8.356737 (VIOLATED)
+output93/X                              1.508186    9.864322   -8.356136 (VIOLATED)
+output127/X                             1.508186    9.864001   -8.355816 (VIOLATED)
+output95/X                              1.508186    9.863217   -8.355032 (VIOLATED)
+output121/X                             1.508186    9.862718   -8.354532 (VIOLATED)
+output77/X                              1.508186    9.862517   -8.354332 (VIOLATED)
+output126/X                             1.508186    9.862012   -8.353827 (VIOLATED)
+output97/X                              1.508186    9.860516   -8.352329 (VIOLATED)
+output92/X                              1.508186    9.860174   -8.351989 (VIOLATED)
+output108/X                             1.508186    9.858444   -8.350259 (VIOLATED)
+output96/X                              1.508186    9.858401   -8.350216 (VIOLATED)
+output94/X                              1.508186    9.858146   -8.349960 (VIOLATED)
+output113/X                             1.508186    9.857769   -8.349584 (VIOLATED)
+output99/X                              1.508186    9.856997   -8.348811 (VIOLATED)
+output111/X                             1.508186    9.855386   -8.347200 (VIOLATED)
+output129/X                             1.508186    9.855276   -8.347091 (VIOLATED)
+output112/X                             1.508186    9.854394   -8.346209 (VIOLATED)
+output114/X                             1.508186    9.854225   -8.346040 (VIOLATED)
+output128/X                             1.508186    9.854069   -8.345883 (VIOLATED)
+output110/X                             1.508186    9.853442   -8.345256 (VIOLATED)
+output98/X                              1.508186    9.852191   -8.344006 (VIOLATED)
+output66/X                              1.508186    9.851582   -8.343395 (VIOLATED)
+_1548_/A2                               1.500000    1.558971   -0.058971 (VIOLATED)
+_1547_/C                                1.500000    1.558908   -0.058908 (VIOLATED)
+_1554_/A2                               1.500000    1.558868   -0.058868 (VIOLATED)
+_1555_/A3                               1.500000    1.558767   -0.058767 (VIOLATED)
+_1537_/B1                               1.500000    1.558295   -0.058295 (VIOLATED)
+_1533_/B                                1.500000    1.557918   -0.057918 (VIOLATED)
+_1542_/B1                               1.500000    1.557364   -0.057364 (VIOLATED)
+_1526_/A3                               1.500000    1.557012   -0.057012 (VIOLATED)
+_1589_/A3                               1.500000    1.556636   -0.056636 (VIOLATED)
+_1525_/A2                               1.500000    1.556632   -0.056632 (VIOLATED)
+_1588_/A2                               1.500000    1.555911   -0.055911 (VIOLATED)
+_1528_/B1                               1.500000    1.554837   -0.054837 (VIOLATED)
+_1624_/A3                               1.500000    1.552594   -0.052594 (VIOLATED)
+_1623_/A2                               1.500000    1.552571   -0.052571 (VIOLATED)
+_1518_/A3                               1.500000    1.552116   -0.052116 (VIOLATED)
+_1517_/A2                               1.500000    1.552049   -0.052049 (VIOLATED)
+_1520_/B1                               1.500000    1.550981   -0.050981 (VIOLATED)
+_1507_/B                                1.500000    1.547668   -0.047669 (VIOLATED)
+_1511_/B1                               1.500000    1.547605   -0.047605 (VIOLATED)
+_1571_/A2                               1.500000    1.543660   -0.043660 (VIOLATED)
+_1572_/A3                               1.500000    1.543636   -0.043636 (VIOLATED)
+_1565_/B1                               1.500000    1.539383   -0.039383 (VIOLATED)
+_1557_/B1                               1.500000    1.539242   -0.039242 (VIOLATED)
+_1583_/A2                               1.500000    1.539212   -0.039212 (VIOLATED)
+_1561_/B1                               1.500000    1.539004   -0.039004 (VIOLATED)
+_1584_/A3                               1.500000    1.538615   -0.038615 (VIOLATED)
+_1578_/B1                               1.500000    1.536305   -0.036305 (VIOLATED)
+_1574_/B1                               1.500000    1.535214   -0.035214 (VIOLATED)
+_1575_/B1                               1.500000    1.534783   -0.034783 (VIOLATED)
+_1501_/B1                               1.500000    1.522310   -0.022310 (VIOLATED)
+_1497_/B1                               1.500000    1.521541   -0.021541 (VIOLATED)
+_1491_/B1                               1.500000    1.521537   -0.021537 (VIOLATED)
+
+max capacitance
+
+Pin                                        Limit         Cap       Slack
+------------------------------------------------------------------------
+output86/X                              1.531687   10.002087   -8.470400 (VIOLATED)
+output69/X                              1.531687   10.001998   -8.470311 (VIOLATED)
+output78/X                              1.531687   10.001858   -8.470171 (VIOLATED)
+output90/X                              1.531687   10.001837   -8.470150 (VIOLATED)
+output100/X                             1.531687   10.001759   -8.470071 (VIOLATED)
+output101/X                             1.531687   10.001730   -8.470042 (VIOLATED)
+output125/X                             1.531687   10.001719   -8.470032 (VIOLATED)
+output68/X                              1.531687   10.001712   -8.470025 (VIOLATED)
+output122/X                             1.531687   10.001696   -8.470009 (VIOLATED)
+output72/X                              1.531687   10.001701   -8.470014 (VIOLATED)
+output82/X                              1.531687   10.001643   -8.469956 (VIOLATED)
+output117/X                             1.531687   10.001615   -8.469928 (VIOLATED)
+output81/X                              1.531687   10.001618   -8.469932 (VIOLATED)
+output75/X                              1.531687   10.001605   -8.469917 (VIOLATED)
+output115/X                             1.531687   10.001538   -8.469851 (VIOLATED)
+output118/X                             1.531687   10.001542   -8.469855 (VIOLATED)
+output70/X                              1.531687   10.001489   -8.469801 (VIOLATED)
+output87/X                              1.531687   10.001444   -8.469757 (VIOLATED)
+output76/X                              1.531687   10.001404   -8.469717 (VIOLATED)
+output80/X                              1.531687   10.001407   -8.469720 (VIOLATED)
+output84/X                              1.531687   10.001410   -8.469723 (VIOLATED)
+output79/X                              1.531687   10.001398   -8.469711 (VIOLATED)
+output74/X                              1.531687   10.001381   -8.469694 (VIOLATED)
+output91/X                              1.531687   10.001384   -8.469696 (VIOLATED)
+output73/X                              1.531687   10.001372   -8.469685 (VIOLATED)
+output102/X                             1.531687   10.001363   -8.469675 (VIOLATED)
+output106/X                             1.531687   10.001105   -8.469418 (VIOLATED)
+output71/X                              1.531687   10.001084   -8.469398 (VIOLATED)
+output104/X                             1.531687   10.001075   -8.469388 (VIOLATED)
+output103/X                             1.531687   10.001020   -8.469333 (VIOLATED)
+output120/X                             1.531687   10.000855   -8.469168 (VIOLATED)
+output83/X                              1.531687   10.000862   -8.469175 (VIOLATED)
+output93/X                              1.531687   10.000851   -8.469164 (VIOLATED)
+output105/X                             1.531687   10.000822   -8.469135 (VIOLATED)
+output107/X                             1.531687   10.000818   -8.469131 (VIOLATED)
+output109/X                             1.531687   10.000812   -8.469125 (VIOLATED)
+output123/X                             1.531687   10.000815   -8.469129 (VIOLATED)
+output124/X                             1.531687   10.000822   -8.469135 (VIOLATED)
+output116/X                             1.531687   10.000805   -8.469118 (VIOLATED)
+output119/X                             1.531687   10.000807   -8.469119 (VIOLATED)
+output89/X                              1.531687   10.000789   -8.469101 (VIOLATED)
+output92/X                              1.531687   10.000673   -8.468986 (VIOLATED)
+output95/X                              1.531687   10.000633   -8.468946 (VIOLATED)
+output108/X                             1.531687   10.000623   -8.468936 (VIOLATED)
+output85/X                              1.531687   10.000616   -8.468928 (VIOLATED)
+output112/X                             1.531687   10.000580   -8.468892 (VIOLATED)
+output94/X                              1.531687   10.000574   -8.468887 (VIOLATED)
+output114/X                             1.531687   10.000561   -8.468873 (VIOLATED)
+output67/X                              1.531687   10.000562   -8.468875 (VIOLATED)
+output113/X                             1.531687   10.000550   -8.468863 (VIOLATED)
+output96/X                              1.531687   10.000557   -8.468870 (VIOLATED)
+output97/X                              1.531687   10.000563   -8.468876 (VIOLATED)
+output98/X                              1.531687   10.000550   -8.468863 (VIOLATED)
+output127/X                             1.531687   10.000534   -8.468847 (VIOLATED)
+output111/X                             1.531687   10.000517   -8.468830 (VIOLATED)
+output88/X                              1.531687   10.000469   -8.468782 (VIOLATED)
+output121/X                             1.531687   10.000453   -8.468765 (VIOLATED)
+output77/X                              1.531687   10.000448   -8.468761 (VIOLATED)
+output126/X                             1.531687   10.000427   -8.468740 (VIOLATED)
+output99/X                              1.531687   10.000376   -8.468688 (VIOLATED)
+output110/X                             1.531687   10.000358   -8.468670 (VIOLATED)
+output128/X                             1.531687   10.000330   -8.468642 (VIOLATED)
+output129/X                             1.531687   10.000330   -8.468642 (VIOLATED)
+output66/X                              1.531687   10.000292   -8.468605 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 65 unannotated drivers.
+ clkload0/Y
+ clkload1/Y
+ clkload10/X
+ clkload11/X
+ clkload12/X
+ clkload13/X
+ clkload14/X
+ clkload15/X
+ clkload16/X
+ clkload17/X
+ clkload18/X
+ clkload19/X
+ clkload2/Y
+ clkload20/X
+ clkload21/X
+ clkload22/X
+ clkload23/X
+ clkload24/X
+ clkload25/X
+ clkload26/X
+ clkload27/X
+ clkload28/X
+ clkload29/Y
+ clkload3/Y
+ clkload30/Y
+ clkload31/Y
+ clkload32/Y
+ clkload33/Y
+ clkload34/Y
+ clkload35/Y
+ clkload36/X
+ clkload37/X
+ clkload38/X
+ clkload39/Y
+ clkload4/X
+ clkload40/Y
+ clkload41/Y
+ clkload42/X
+ clkload43/X
+ clkload44/X
+ clkload45/Y
+ clkload46/X
+ clkload47/Y
+ clkload48/X
+ clkload49/X
+ clkload5/X
+ clkload50/X
+ clkload51/Y
+ clkload52/Y
+ clkload53/X
+ clkload54/Y
+ clkload55/Y
+ clkload56/Y
+ clkload57/Y
+ clkload58/X
+ clkload59/Y
+ clkload6/X
+ clkload60/X
+ clkload61/X
+ clkload62/X
+ clkload63/Y
+ clkload64/X
+ clkload7/X
+ clkload8/X
+ clkload9/X
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 96
+max fanout violation count 0
+max cap violation count 64
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
