@@ -1,22 +1,27 @@
 `timescale 1ns/1ps
 
 module carry_bypass_adder_tb;
-
+  reg clk;                // Clock signal
   reg signed [31:0] a, b;
   reg cin;
 
   wire signed [31:0] sum;
   wire cout, overflow;
 
-  carry_bypass_adder BPA (
+  carry_bypass_adder_routing BPA (
     .a(a),
     .b(b),
     .cin(cin),
+    .clk(clk),
     .sum(sum),
     .cout(cout),
     .overflow(overflow)
   );
-
+   // Generate the clock signal
+    initial begin
+        clk = 0;
+        forever #10 clk = ~clk; // Clock period = 20ns (50MHz frequency)
+    end
   integer passed = 0;
 
   initial begin
