@@ -1,5 +1,5 @@
 # Define a virtual clock with a 20ns period
-create_clock -period 20 [get_ports clk]
+create_clock -period 22 [get_ports clk]
 
 # Define input delay of 1ns for all input ports
 set_input_delay 1 [all_inputs] -clock [get_clocks clk]
@@ -10,5 +10,5 @@ set_output_delay 0.5 [all_outputs] -clock [get_clocks clk]
 # Define load of 10 for all output ports
 set_load 10 [all_outputs]
 
-# Set the clock skew constraint to 0.2ns
+# # Set the clock skew constraint to 0.2ns
 set_clock_uncertainty 0.2 [get_clocks clk]

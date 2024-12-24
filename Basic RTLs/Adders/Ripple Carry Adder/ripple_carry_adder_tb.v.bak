@@ -11,7 +11,7 @@ module ripple_carry_adder_tb;
     integer test_case = 1;
 
     // Instantiate the RCA module
-    ripple_carry_adder uut (
+    ripple_carry_adder_synthesized uut (
         .a(a),
         .b(b),
         .cin(cin),

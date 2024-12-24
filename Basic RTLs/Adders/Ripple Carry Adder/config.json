@@ -18,12 +18,12 @@
     ]
   },
   "DESIGN_NAME": "ripple_carry_adder",
-  "VERILOG_FILES": ["./ripple_carry_adder.v"],
+  "VERILOG_FILES": ["./full_adder.v","./ripple_carry_adder.v"],
   "CLOCK_PORT": "clk",
   "CLOCK_PERIOD": 20.0,
   "SYNTH_STRATEGY": "DELAY 0",
   "FP_CORE_UTIL": 0.6,
   "PNR_SDC_FILE": [
-    "/home/amostafa/Synopsys-Chip-Design/Basic RTLs/Adders/Ripple Carry Adder/ripple_carry_adder.sdc"
+    "/home/amostafa/synopsys_test/ripple_carry_adder.sdc"
   ]
 }
