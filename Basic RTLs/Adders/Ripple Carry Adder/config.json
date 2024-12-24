@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "version": 2,
+    "flow": [
+      "Yosys.Synthesis",
+      "OpenROAD.Floorplan",
+      "OpenROAD.GlobalPlacementSkipIO",
+      "OpenROAD.IOPlacement",
+      "OpenROAD.GlobalPlacement",
+      "OpenROAD.RepairDesignPostGPL",
+      "OpenROAD.DetailedPlacement",
+      "OpenROAD.CTS",
+      "OpenROAD.GlobalRouting",
+      "OpenROAD.DetailedRouting",
+      "OpenROAD.STAPrePNR",
+      "OpenROAD.RCX",
+      "OpenROAD.STAPostPNR"
+    ]
+  },
+  "DESIGN_NAME": "ripple_carry_adder",
+  "VERILOG_FILES": ["./full_adder.v","./ripple_carry_adder.v"],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 20.0,
+  "SYNTH_STRATEGY": "DELAY 0",
+  "FP_CORE_UTIL": 0.6,
+  "PNR_SDC_FILE": [
+    "/home/amostafa/synopsys_test/ripple_carry_adder.sdc"
+  ]
+}
